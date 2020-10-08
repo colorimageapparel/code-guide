@@ -1,8 +1,16 @@
+# VERY IMPORTANT! This repo is public, to take advantage of github pages publishing feature. NEVER introduce any sensitive content to this repo!
+
+Obviously, don't put in any passwords, sensitive private source code. There should be no need for it, of course, but it's worth pointing out.
+
 # Code Guide
 
 Code Guide is a set of standards for developing consistent, flexible, and sustainable HTML and CSS. It comes from years of experience writing code on projects of all sizes. It's not the end-all be-all, but it's a start.
 
-**[Start reading ☞](https://codeguide.co)**
+**[Start reading ☞](https://colorimageapparel.github.io/code-guide/)**
+
+# Contributing
+
+Pull requests are welcome. We'll merge any PRs that have the support of at least 2/3 of the team.
 
 ---
 
@@ -12,7 +20,7 @@ Released under MIT by, and copyright, @mdo.
 
 ### Translations
 
-Translations are maintained by their creators and may not always be up to date with the original here.
+Translations are maintained by their creators and may not always be up to date with our company standards, but feel free to refer to them as a resource.
 
 - [Chinese](http://zoomzhao.github.io/code-guide/) - Translated by [Zoom Zhao](https://github.com/ZoomZhao)
 - [Chinese](http://codeguide.bootcss.com/) - Translated by [Wang Sai](https://github.com/wangsai)
