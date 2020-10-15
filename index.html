@@ -39,6 +39,16 @@ layout: default
       <li><a href="#css-organization">Organization</a></li>
     </ul>
   </div>
+  <div class="col">
+    <h3><a href="#liquid">Liquid</a></h3>
+    <ul>
+      <li><a href="#liquid-intro">An Introduction to Shopify</a></li>
+      <li><a href="#liquid-syntax">Syntax</a></li>
+      <li><a href="#liquid-whitespace">Whitespace in Expressions and Statements</a></li>
+      <li><a href="#liquid-variables">Variables</a></li>
+      <li><a href="#liquid-debugging">Debugging Tips</a></li>
+    </ul>
+  </div>
 </div>
 
 <h2 id="golden-rule">Golden rule</h2>
@@ -411,5 +421,84 @@ layout: default
       <li>Add new line at end of files.</li>
     </ul>
     <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="https://editorconfig.org">about EditorConfig</a>.</p>
+  </div>
+</div>
+
+<h2 id="liquid">Liquid</h2>
+
+<div class="section" id="liquid-intro">
+  <div class="col">
+    <h3>An Introduction to Shopify</h3>
+    <p>Shopify is the only platform that we develop for that uses Liquid. Fortunately, they've done a great job on <a href="http://docs.shopify.com/themes">documentation</a> and almost all of the info that you need can be found there.</p>
+
+    <ul>
+      <li><a href="http://docs.shopify.com/themes/liquid-documentation/basics">Basics</a></li>
+      <li><a href="http://docs.shopify.com/themes/liquid-documentation/tags">Tags</a></li>
+      <li><a href="http://docs.shopify.com/themes/liquid-documentation/objects">Objects</a></li>
+      <li><a href="http://docs.shopify.com/themes/liquid-documentation/filters">Filters</a></li>
+    </ul>
+
+    <p>The <strong>Objects</strong> link above is almost certainly the most important resource available to you when writing code for Shopify. It contains every single object you might come across during development and all of the values attached to them.</p>
+  </div>
+</div>
+
+<div class="section" id="liquid-syntax">
+  <div class="col">
+    <h3>Syntax</h3>
+    <ul>
+      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
+      <li>Nested elements should be indented once (two spaces).</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight liquid %}{% include liquid/syntax.liquid %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="liquid-whitespaces">
+  <div class="col">
+    <h3>Whitespace in Expressions and Statements</h3>
+    <p>Always surround these binary operators with a single space on either side:</p>
+      <ul>
+        <li>assignment: <code>=</code></li>
+        <li>comparisons: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, etc.</li>
+        <li>conditionals: <code>if</code>, <code>unless</code>, <code>and</code>, <code>or</code></li>
+        <li>filters: <code>|</code>, <code>minus:</code>, <code>divided_by:</code>, <code>strip</code></li>
+        <li>braces: <code>{% raw %}{{  }}{% endraw %}</code>, <code>{% raw %}{% %}{% endraw %}</code></li>
+      </ul>
+  </div>
+  <div class="col">
+    {% highlight liquid %}{% include liquid/whitespaces.liquid %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="liquid-variables">
+  <div class="col">
+    <h3>Variables</h3>
+    <ul>
+      <li>Always assign and capture variables in snake_case.</li>
+      <li>Only assign a variable if it:
+        <ol>
+          <li>is used more than once on a page</li>
+          <li>reduces line length and confusion where it gets outputted</li>
+        </ol>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight liquid %}{% include liquid/variables.liquid %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="liquid-debugging">
+  <div class="col">
+    <h3>Debugging Tips</h3>
+    <ul>
+      <li>Double check that Shopify is returning the correct data with the <code>json</code> filter</li>
+      <li>Make sure the theme settings page isn't lying to you by creating a Theme Settings Javascript object</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight liquid %}{% include liquid/debugging.liquid %}{% endhighlight %}
   </div>
 </div>
